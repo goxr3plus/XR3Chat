@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.fxmisc.richtext.InlineCssTextArea?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="332.0" prefWidth="237.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Users">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView fx:id="listView" prefHeight="200.0" prefWidth="219.0" GridPane.halignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ListView>
+                        <Label fx:id="usersInRoom" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="170.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Users in Room:15" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="sentPrivateMessage" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Sent Private Message" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </GridPane>
+               </content>
+          </Tab>
+            <Tab text="Rooms">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView prefHeight="200.0" prefWidth="200.0" />
+                        <Label alignment="CENTER" prefHeight="354.0" prefWidth="183.0" style="-fx-font-weight: bold; -fx-font-size: 17px;" text="General Room By Default" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </right>
+   <top>
+      <Label fx:id="topLabel" alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="25.0" text="Label" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <GridPane fx:id="bottomGridPane" prefHeight="33.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="sentMessage" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Sent" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="messageField" prefHeight="25.0" prefWidth="347.0" promptText="general message..." style="-fx-font-weight: bold;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+         </children>
+      </GridPane>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <center>
+      <InlineCssTextArea fx:id="messagesArea" style="-fx-border-color: cyan; -fx-border-radius: 5px;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </InlineCssTextArea>
+   </center>
+</fx:root>

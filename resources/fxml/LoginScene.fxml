@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="569.0" type="StackPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="569.0" preserveRatio="false" StackPane.alignment="CENTER" />
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="454.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="186.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="197.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="87.0" style="-fx-font-weight: bold;" text="UserName*" textFill="#fffbfb" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="97.0" style="-fx-font-weight: bold;" text="Password" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="userPassword" focusTraversable="false" promptText="password..." style="-fx-font-weight: bold;" GridPane.rowIndex="4" />
+            <TextField fx:id="userName" focusTraversable="false" promptText="username..." style="-fx-font-weight: bold;" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="loginAsResident" alignment="CENTER" focusTraversable="false" mnemonicParsing="false" text="Login As Resident" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="loginAsGuest" alignment="CENTER" focusTraversable="false" mnemonicParsing="false" text="Login As Guest" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Separator orientation="VERTICAL" prefHeight="149.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.rowSpan="3" />
+            <Separator prefHeight="0.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <TextField fx:id="hostField" alignment="CENTER" focusTraversable="false" promptText="IP" text="localhost" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <tooltip>
+                  <Tooltip text="Host to Connect(Use IP or 'localhost')" />
+               </tooltip>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="portField" alignment="CENTER" focusTraversable="false" promptText="Port" text="4444" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <tooltip>
+                  <Tooltip text="Port to Connect" />
+               </tooltip>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="25.0" prefWidth="99.0" text="Connection*" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="399.0" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="XR3CHAT" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <Region fx:id="region" prefHeight="200.0" prefWidth="200.0" visible="false" />
+      <ProgressIndicator fx:id="indicator" visible="false" />
+      <Label fx:id="connectingLabel" text="Connecting....." visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>

@@ -1,0 +1,290 @@
+
+
+/**Styling for XPlayer */
+
+/*******************************************************************************
+
+*                            DialogPanes!!!                                *
+
+******************************************************************************/
+
+.root{	
+	/*-fx-background-image:url("/images/back.jpg");
+	-fx-background-size: 100% 100%;*/
+}
+
+.dialog-pane{
+  -fx-border-color:black;
+  -fx-border-width:2.0px;
+ }
+
+/**Costumization of The Bar where the buttons are located**/
+.dialog-pane > .button-bar > .container {
+  -fx-background-color:black;
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+   -fx-background-color: yellow;
+   -fx-text-fill:black;
+   -fx-font-size:15.0px;
+}
+
+/**Costumization of DialogPane Header**/
+.dialog-pane:header .header-panel {
+  -fx-background-color: black;
+}
+
+.dialog-pane:header .header-panel .label{
+  -fx-background-color: yellow;
+  -fx-background-radius:10.0px;
+  -fx-text-fill:black;
+  -fx-font-size:15.0px;
+}
+
+
+/**Costumization of Buttons**/
+.dialog-pane .button{
+   -fx-background-color:black;
+   -fx-text-fill:white;
+   -fx-wrap-text: true;
+   -fx-effect: dropshadow( three-pass-box, yellow, 10.0, 0.0, 0.0, 0.0);
+   -fx-cursor:hand;
+ }
+
+.dialog-pane .button:hover{     
+  -fx-background-color:white;
+  -fx-text-fill:black;
+  -fx-font-weight:bold; 
+ }
+
+
+/*******************************************************************************
+
+*                           ToolTips!!!                              *
+
+******************************************************************************/
+
+.tooltip{
+  -fx-background-color: yellow;
+  -fx-text-fill:black;
+  -fx-font-size:90.0%;
+  -fx-effect: dropshadow( three-pass-box, black, 10.0, 0.0, 0.0, 0.0);
+   
+}
+
+
+/*******************************************************************************
+
+*                             TabPane                                      *
+
+******************************************************************************/
+ 
+
+.tab-pane .tab-header-area .tab-header-background {
+    /*-fx-opacity: 0.0;*/
+    -fx-background-color:linear-gradient(#38424b 0.0%, #1f2429 20.0%, #191d22 100.0%);    	    
+}
+
+
+.tab-pane{
+	
+    -fx-tab-min-width:90.0px;
+    /*-fx-effect: dropshadow(three-pass-box, red, 5.0, 0.0, 0.0, 0.0);*/
+    
+}
+
+
+.tab-pane .tab{
+    -fx-background-color: orange;
+    -fx-background-radius: 20.0 0.0 20.0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;   
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: black;
+}
+
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: black;
+    -fx-font-size: 11.0px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size:12px;
+}
+
+.tab:hover .tab-label{
+	-fx-text-fill:white;
+	-fx-background-radius:5.0px;
+	-fx-background-color: grey;   
+}
+
+
+
+
+/*******************************************************************************
+
+* CSS Styles for the Button control                                        *
+
+******************************************************************************/
+
+  .button{	
+ 	-fx-background-color:black; 
+ 	-fx-text-fill:white;
+ 	-fx-background-radius:20.0px;	
+ 	-fx-effect: dropshadow( three-pass-box , orange , 5.0, 0.0 , 0.0 , 1.0 );
+ }
+ 
+  .button:hover{
+  	-fx-background-color:white;	  
+  	-fx-text-fill:black;	
+  	-fx-cursor:hand;
+  }
+  
+ 
+/*******************************************************************************
+
+* CSS Styles for the ContextMenu,MenuItem,..                                  *
+
+******************************************************************************/
+
+ 
+ .context-menu {
+  	-fx-background-color:linear-gradient(#38424b 0.0%, #1f2429 20.0%, #191d22 100.0%);
+  	-fx-background-radius:4.0;
+}
+
+ .menu-item .label{
+ 	-fx-text-fill:white;
+ }
+ 
+ .menu-item:focused {
+ 	-fx-background-color:orange;
+ 	-fx-background-radius:10.0;
+ }
+ 
+ 
+/*******************************************************************************
+
+* CSS Styles for the Layouts..                                  *
+
+******************************************************************************/
+
+  #replayToolGrid{
+ 	-fx-background-color:black;
+  }
+ 
+  #controllerContainer{
+  	-fx-background-color:transparent;
+  }
+  
+  .scroll-pane .viewport {
+    -fx-background-color: transparent;
+  }
+
+  .scroll-pane {
+	-fx-background-color:transparent;
+  }
+  
+  
+  .scroll-bar{
+    -fx-background-color: transparent;
+    /*-fx-background-radius:2.0em;*/
+  }
+
+  .scroll-bar:horizontal .increment-arrow {
+  	-fx-background-color: black;
+   -fx-shape: "M 0 0 L 4 8 L 8 0 Z";  
+   -fx-padding: 0.3em;
+   -fx-rotate: -90.0;
+  }
+  
+   .scroll-bar:horizontal .decrement-arrow {
+   -fx-background-color: black;
+   -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+   -fx-padding: 0.3em;
+   -fx-rotate: 90.0;
+  }
+  
+  .scroll-bar:vertical .increment-arrow {
+   -fx-background-color: rgb(211.0,211.0,211.0);
+   -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+   -fx-padding: 0.3em;
+   -fx-rotate: 0.0;
+  }
+  
+  
+  
+  .scroll-bar:vertical .decrement-arrow {
+   -fx-background-color: rgb(211.0,211.0,211.0);
+   -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+   -fx-padding: 0.3em;
+   -fx-rotate: -180.0;
+  }
+
+  .scroll-bar:vertical .increment-button,
+  .scroll-bar:vertical .decrement-button {
+   -fx-background-color:transparent;
+  }
+  
+  .scroll-bar:horizontal .increment-button,
+  .scroll-bar:horizontal .decrement-button {
+   -fx-background-color:transparent;
+  }
+
+
+
+/*******************************************************************************
+
+* CSS Styles for the ProgressBar/ProgressIndicator                                 *
+
+******************************************************************************/
+
+.progress-indicator{
+	-fx-progress-color:orange;
+}
+
+.progress-bar{
+	-fx-progress-color:orange;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0.0px 0.75em to 0.75em 0.0px,
+        repeat,
+        -fx-accent 0.0%,
+        -fx-accent 49.0%,
+        derive(-fx-accent, 30.0%) 50.0%,
+        derive(-fx-accent, 30.0%) 99.0%
+    );
+}
+
+
+/*******************************************************************************
+
+* CSS Styles for the TextArea                            *
+
+******************************************************************************/
+  
+  
+ .text-area{
+ 	-fx-background-color:black;
+ 	-fx-text-fill:white;
+ 	-fx-font-size:14.0px;
+ 	-fx-font-weight:bold; 	
+    -fx-selection-bar-text: orange;
+ }
+ 
+  .text-area .content{
+  	-fx-background-color:black;
+  }
+  
+  
+
